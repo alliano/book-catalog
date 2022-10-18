@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book</title>
+</head>
+<body>
+	<h1>Add new Book</h1>
+	<form method="post" th:action="@{/book/new}" th:object="${book}">
+		<table>
+			<tr>
+				<td>Title</td>
+				<td><input type="text" id="title" placeholder="title" th:field="*{bookTitle}"></td>
+				<td><p style="color:red; display: block;" th:if="${#fields.hasErrors('bookTitle')}" th:errors="*{bookTitle}"></p></td>
+			</tr>
+			<tr>
+				<td>Author</td>
+				<td><input type="text" id="Author" placeholder="author" th:field="*{authorName}"></td>
+				<td><p style="color:red; display: block;" th:if="${#fields.hasErrors('authorName')}" th:errors="*{authorName}"></p></td>
+
+			</tr>
+			<tr>
+				<td>description</td>
+				<td><input type="text" id="description" placeholder="description" th:field="*{descriptions}"></td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit">Add</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

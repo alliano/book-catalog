@@ -1,0 +1,50 @@
+fungsi dari pengaturan fetch :
+
+
+ Fetch adalah konfigurasi untuk memperintahkan jpa implementatornya(hibernate) untuk mengfetch data
+ assosiasi dari entity
+ jadi jikalau suatu entity di query maka konfigurasi fetch nanti akan menentukan data reference
+ nya akan di fetch juga atau nga.
+ jika konfigurasinya adalah eager maka data tersebut akan ditarik(diquery juga) begitu data dari
+ entity yang diquery didapatkan
+ namun jika fetch nya kita set lezy maka data di tebel rference tidak akan ditarik meskipun
+ data dari entity yang diquery didapatkan
+
+ untuk konfigurasi default fetch adalah :
+ @ManyToMany => lazy
+ @OneToMany => lazy
+ @ManyToOne => Eager
+ @OneToOne => Eager
+
+ cascading
+    adalah operasi yang dilakukan terhadap sebuah relasi dari entity tersebut setelah tentity tersebut
+    selesai melakukan operasi( create, update, read, delete)
+ jenis jenis tipe Cascading :
+    - ALL
+        -> cascading dengan tipe ini jikalau suatu entity melakukan operasi (Create Update dll)
+           maka entity reference nya juga akan melakukan operasi yang
+           sama (mengalami propagansi -> melakuakn operasi yang sama pada child entity nya)..
+           misal Entity Author meng create 1 author maka entity relasinya dia juga akan meng create
+           dengan data yang dikirimkan
+           contoh casdading dengan type ALL ada di Author.java -> field address
+           dengan memberi Cascading ALL berarti artinay kita memberi cascading
+           sbg berikut :
+           1. DETECT,
+           2. MERGE,
+           3. PERSIST,
+           4. REFRESH,
+           5. REMOVE
+
+    - MERGE
+        -> tipe cascading ini Mirip dengan PERSIST/ALL bedanya MERGE ini oprasinya update jadi dengan menggunakan
+           cascading dengan tipe MERGE operasi dari entity child akan mengalami propagansi dari entity parent
+           misalnya entity parent melakukan update maka operasi tersebut akan di propagansi kan kepada
+           child entity nya (proses update akan di terus kan ke child entity nya)
+    - REMOVE
+         -> tipe cascading ini sama prinsipnya dengan MERGE dan PERSIST yang mna data dari parent
+            entity nya di delete maka entity parent akan mempropagansi ke entity
+            child nya (meneruskan operasi yang dijalankan di parent di reruskan ke child entity nya) namun untuk
+            cascading ini tidak bisa untuk soft delete bisanya hard delete
+
+            cara kerja cascading ini sebelum data dari parent nya ter delete data dari entity child nya akan
+            di delete terlebuih dahulu cara kerja ini berlawanan dengan proses update dan cereate

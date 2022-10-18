@@ -1,0 +1,552 @@
+clear
+docker container stop postgres
+mvn spring-boot:run -Dspring-boot.run.profiles=development
+cd Latihan/java/course/book-catalog-v2/ && code . && docker container start postgres && exit
+flaclear
+flameshot screen
+flameshot
+mkdir college_assigments
+ls
+l
+XLWEAE
+xlwE
+docker container start postgres
+cear
+c;ear
+cmatrix
+pwd
+mvn install spirng-boot
+mvn clean
+cleasr
+mvn clean && mvn spring-boot:run -Dspring-boot.run.profiles=development
+lazydocker
+docker container stats
+docker continer stats
+docker container ls
+docker container -l
+docker conatainer ls
+docker container status postgres
+clea
+ll
+sl
+shutdown now
+neofetch
+cd Latihan/java/course/book-catalog-v2/
+terminal
+msfconsole
+cle3ar
+rclear
+clearr
+alis doi a
+doi-version=
+alias doi-version="echo"maaf ada gaada doi jadi anda TOLOL ANJG"";
+alias doi-version= echo"maaf ada gaada doi jadi anda TOLOL ANJG"
+doi-version
+are
+cle
+c,ear
+claer
+htop
+glances
+cleare
+cpp main.cpp
+gcc main.cpp
+gcc main
+lear
+code .
+cd c++/
+mkdir c++
+cd Latihan/
+gcc --version
+node --version
+node test.js
+tsc --version
+java --version
+cd etc/
+cd ..
+lsk
+cd /dev/sda
+cd
+rl
+s
+cd  dev/snd/
+sclear
+cd ../
+systemctl status sys-devices-platform-serial8250-tty-ttyS25.device
+systemctl status kde
+systemctl status sddm
+cat pass.txt
+cleqar
+code test.js
+mv test.cpp test.js
+code test.cpp
+gcc test.cpp
+nano test.cpp
+cl;ea
+cpp test.cpp
+touch test.cpp
+rm test.cpp
+cat test.cpp
+sudo netstat -tunlp
+fuser -k 8082/tcp
+r
+CLEAR
+cd web-chat/
+cd java
+java src/App.java
+cd test.scanner/
+javac --version
+1
+3
+2
+sudo su
+\
+
+fish_is_root_user
+fish -version
+zsh
+bash
+do
+clear\
+
+scrcpy
+scrcpy]
+df -h /tmp
+whatsapp
+clerr
+yay -S whatsapp-for-linux
+rm -rf whatsapp-for-linux/
+sudo pacman -U whatsapp-for-linux-1.4.7.tar.gz
+makepkg -Si -f
+makepkg -Si
+sudo pacman -U whatsapp-for-linux-1.4.7-1.src.tar.gz
+sudo pacman -SU whatsapp-for-linux-1.4.7-1.src.tar.gz
+cd whatsapp-for-linux/
+sudo yay -S whatsapp-for-linux
+sudo pacman -Syy
+sudo pacman _Syy
+sudo Pacman -U whatsapp-for-linux-1.4.7-1.src.tar.gz
+git clone https://aur.archlinux.org/whatsapp-for-linux.git
+yay -S whatsapp
+xset led
+docker container exec -it postgres /bin/bash
+cpp --version
+g++ --version
+cpp
+clwE
+sudo Pacman -Syy
+\! clear
+cd Latihan/java/course/book-catalog-v2/ && code . && docker container start postgres  && exit
+ckear
+docker container e
+vclerastr
+cd Latihan/java/course/book-catalog-v2/ && code . && docker container start postgres
+cd Latihan/java/course/book-catalog-v2/ && code . && docker container start postgre
+clcear
+cd Latihan/java/course/book-catalog-v2/ && code . && exit
+code  . && exit
+lclear
+clkear
+\clear
+cler
+mvn clear
+tyui
+sudo pacman -S sl
+Mjvwjvijwpbnpiesrb
+cd java/course/book-catalog-v2/
+c;lear
+cd java/co
+cle3r
+/bin/python /home/alliano-dev/Latihan/python/main.py
+python3 main.cpython-310.pyc
+cd __pycache__/
+python3 -m py_compile main.py
+cd Latihan/python/
+python
+python --HOME
+python --version
+python3 main.py
+cd python/
+mkdir python
+lc
+pip
+mvn clean install
+mvn install
+mvn clean insta
+dbeaver --version
+psql -h http://localhost:5432 -U alliano-dev -W
+psql -h 5432 -U alliano-dev -W
+psql -U alliano-dev -W
+psql
+docker volume ls
+docker contianer ls
+docker container ls -a
+docker container create --name postgres --publish 5432:5432 --mount "type=volume,source=postgresSql,destination=/var/lib/postgresql/data" --env POSTGRES_PASSWORD="alliano361**" --env POSTGRES_USER="alliano-dev" postgres:latest
+docker volume create postgresSql
+nano docker.sh
+code
+clear]
+cat docker.sh
+cd docker/
+docker image ls
+docker pull postgres:latest
+docker pull image postgres:latest
+cd Latihan/java/web-chat/
+cd Latihan/java/w
+nmap
+eapol_test
+cls
+celar
+cvleasr
+mfsconsole
+lazy
+clersar
+cxlear
+cd book-catalog-v2/
+cd book-catalog/
+cd course/
+cd Latihan/java/
+exit
+clewar
+lsof
+cleaer
+lsblk
+lsbk
+slk
+sshut
+cleaqr
+cd java-bootstrap/
+clersert
+clesr
+clersrt
+vlrst
+ld
+mvn clean spring-boot:run
+clweAE
+unzip lombok-di-finish.zip
+cd Downloads/
+lks
+cd ../../../
+cd ../../../../
+cat BookDetailDto.java
+cd dto/
+cd alliano/
+cd com/
+cat AppConfiguration.java
+cd configuration/
+cd java/
+cd main/
+cd ../../../../../../
+cd repositoryimpl/
+cp -r repositoryimpl/ ../../../../../../../book-catalog-v2/src/main/java/com/bookcatalog/bookcatalogv2/repositories
+cp BookRepository.java ../../../../../../../book-catalog-v2/src/main/java/com/bookcatalog/bookcatalogv2/repositories
+cd repositories/
+cd src/
+cd book-catalog
+scklear
+docker container stop mysql
+docker container start mysql
+cd security/
+cd secruity/
+mvn spring-boot:run -Dspring-boot.run.profiles=test
+mvn spring-boot:run -Dspring-boot.run.profiles=productions
+mvn celan
+mvn spring-boot:run -Dspring-boot.run.profiles=production
+sudo fuser -k 8787/tcp
+sudo nestat -tunlp
+mvn clean spring-boot:run -Dspring-boot.run.profile=development
+cat Users.java
+cd entities/
+cd models/
+cd java/com/web/
+ols
+cd src/main
+la
+chroot
+archlinux-java help
+archlinux-java get
+archlinux-java status
+archlinux-java
+arch-chroot
+cleware
+unzip property-binding-finish.zip
+cd Latihan/java/course/
+;
+;s
+cd Latihan/java/course/book-catalog/
+sls
+cd src/main/resources/
+cd resources/
+CD resources/
+clwAE
+mvn spring-boot:run
+ls;
+unzip spring-ioc-container-finish.zip
+unzip spring-ioc-container-start.zip
+mvn archetype:generate -DgroupId=com.alliano -DartifactId=book-catalog -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+mkdir course
+rm Udeler-1.8.2-linux-x86_x64.AppImage
+chmod a+x Udeler-1.8.2-linux-x86_x64.AppImage
+cat UdelerAuthenticator.crx
+unzip UdelerAuthenticator.zip
+zip
+rm -rf udeler-bin/
+udeler-bin/
+udeler --version
+ls -l
+nano pass.txt
+lsa
+yay -S --mflags --skipinteg udeler-bin
+yay -S --mflags --skipinteg Udeler
+yay -S --mflags --skipinteg udeler
+yay -Ss udeler
+rm udeler-bin-1.0-2.src.tar.gz
+sudo pacman -U udeler-bin-1.0-2.src.tar.gz
+sudo pacman -SU udeler-bin-1.0-2.src.tar.gz
+makepkg -S
+./ udeler.desktop
+desktop
+./udeler.desktop
+udeler.desktop
+sudo yay -Syy
+makepkg
+pkgbuild
+pkg build
+pkgconf
+cd udeler-bin/
+git clone https://aur.archlinux.org/udeler-bin.git
+yay -S undler
+rm a
+cat a
+cd Latihan/java/jpa
+pwd]
+mvn clean install spring-boot:run
+cat UserPostRepository.java
+cleaa
+cd src/main/java/com/web/models/repositories/
+cd Latihan/java/jpa/
+fuser -k 8080/tcp
+clewaER
+clar
+PID
+gedit
+aa
+ar
+a
+cealr
+cdlar
+sudo cfdisk /dev/sda
+clear && sudo fdisk -lB
+fdisk -lB
+mmclear
+sudo pacman -Rcns gwenview
+gwenview front.pdf
+gwenview
+yay -S gwenview
+rls
+sudo pacman -S libreoffice
+sudo pacman _syy
+adb devices
+cd mode
+cat UserController.java
+cd controllers/
+cd web/
+cd .././../../
+lsd
+cd java/web-chat/
+cd ../../
+docker container exec -it mysql /bin/bash
+rclea
+szclea
+l;s
+\411toppm
+testdisk
+c
+cat mvnw
+mvn  clean spring-boot:run
+cfdisk /dev/sda
+cmake
+cd jpa/
+c;erar
+cd ../../java/Rest-api/project/ && mvn spring-boot:run
+mvn
+cat application.properties
+cd Rest-api/project/
+cd ../..
+cat /home/alliano-dev/Latihan/java/web-chat/src/main/resources/application.properties
+cat ConnectionPoolTest.java
+cat DriverTest.java
+cd test/java/com/javadatabase/
+cd main/java/com/javadatabase/
+cd database
+lcea
+mvn springboot:run
+mv jpa/ ../
+clearl
+cd Latihan/java/collections/
+sd2raw
+mvn clean install spring-boot:run\
+
+ss
+git commit -m "initial commit"
+git add .
+rm -rf data/
+cd data/
+cd collections/
+mvn ./
+rm -rf /home/alliano-dev/.m2/repository/
+cd collection
+yay -S vlc
+yay -Syy
+yay -S archlinux-keyring
+touch EVcIpbAwCg%/EsEfmkWbE3AwThc6@.png
+rm babi.png
+touch babi.png
+touch EVcIpbAwCg%/EsEfmkWbE3AwThc6@?.png
+cat FileService.java
+cat
+cd services/
+arlcear
+lce
+cd demo/
+cd src/main/java/com/ex/upload/
+cd src/main/java/com/ex/upload/demo/
+sudo pacman-key --refresh-keys
+sudo pacman -S vlc
+sudo pacman-key --populate
+sudo pacman-key --init
+pacmna-key --init
+sudo pacmna-key --init
+ntpd -qg
+hwclock -w
+hwclock
+sudo pacman -Scc
+pacman -S vlc
+sudo rm /var/lib/pacman/db.lck
+sudo cat /var/lib/pacman/db.lck
+cat /var/lib/pacman/db.lck
+sudo pacman -Sy
+cdode .
+cd com.test/
+cd random/
+heroku addons:list
+heroku update:HELP.md
+heroku update
+cake
+cd importcsv/
+cd implement-soft-delete/
+le
+jasper
+cd java-webapp/
+c;e
+;ls
+iwctl
+cd uploads/
+cd Latihan/java/demo/
+git push -u x master
+cat src/main/java/com/transaction/services/RekeningService.java
+cd transaction-jpa/
+k.web.multipart.MultipartException: Current request is not a multip
+cd ra
+git status
+cd spring-boot/
+clear4
+code ,
+mvn clean spring-boot:help
+cat /home/alliano-dev/pass.txt
+cat src/main/java/com/security/controllers/UserController.java
+cat src/main/java/com/security/controllers/
+git push -u x x/master
+cd java/api-sorter/
+lsl
+cd Videos/
+mkdir Downloads
+sudo rm -rf Downloads/
+rm -rf Downloads/
+cd rm -r Downloads/
+clkea
+dcker container ls
+mvn clearn
+alias doi-version= printf "gaada doi"
+alias doi-version= printf "kamu gaada doi alliano sadar lah:v"
+printf "hallo nama saya ikan"
+alias doi-version="printf "kamu gaada doi bgsd""
+printf "hello wolrd"
+.
+alias .="clear"
+.="clear"
+alias "doi-version"="printf "kamu gaada doi alliano"";
+print "hello word"
+sudo pacman -S testdisk
+doi --version
+semangat --version
+go version
+npm --version
+mvn --version
+semangat --version && akhlak --version
+kontol --version
+git --version
+docker --version
+mkdir Desktop
+sudo nano /etc/passwd
+grep alliano-dev /etc/passwd
+fish
+grep alliano-dev /etc/passed
+mkdir Videos
+help
+echo $0
+sudo chsh -s /bin/fish
+sudo chsh -s /bin/bash
+omf theme agnoster
+omf install agnoster
+omf theme
+omf list
+color
+omf theme gentoo
+omf install gentoo
+date
+
+curl -L https://get.oh-my.fish | fish
+onefetch
+cat /etc/fstab
+cd share/
+cd usr/
+cd ,,
+cle4ar
+cat 8:0/
+cd block/
+cd dev
+cd sys/
+lsclea
+cd opt/
+i3
+cd ext
+cd x86_64-efi/
+cd grub/
+cd boot/
+cd sda
+cd dev/
+cd ../../../../../
+cd arch/
+cd EFI/
+cd efi/
+sudo fdisk -l
+sudo photorec
+sudo pacman -Syyu
+ls > recup_dir.2/f0163128.h
+ls > recup_dir.
+rm photorec.se2
+cat photorec.se2
+sudo rm -rf Desktop/
+rm -rf Desktop/
+rmdir  Desktop/
+rmdir -f Desktop/
+rmdir -rf Desktop/
+rm --help
+rm -rf .
+rm -rf .*
+cd Desktop/
+cd recup_dir.2/
+;clear
+cd local/
+cd /tmp

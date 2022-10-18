@@ -1,0 +1,125 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_catalog
+    username: alliano-dev
+    password: alliano361**
+    hikari:
+      connection-timeout: 600000
+      idle-timeout: 600000
+      max-lifetime: 180000
+      maximum-pool-size: 10
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialec: org.hibernate.dialect.PostgreSQLDialect
+  config:
+    activate:
+      on-profile: productions
+app:
+  currency: IDR
+  time-zone: Asia/Jakarta
+  welcome-txt: profile => on production mode<br>
+server:
+  port: 8081
+
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_catalog
+    username: alliano-dev
+    password: alliano361**
+    hikari:
+      connection-timeout: 600000
+      idle-timeout: 600000
+      max-lifetime: 180000
+      maximum-pool-size: 10
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialec: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          '[batch_size]': 10
+          '[order_insert]': true
+  config:
+    activate:
+      on-profile: development
+
+server:
+  port: 8082
+app:
+  welcome-txt: profile => on development mode<br>
+  time-zone: Asia/Jakarta
+  currency: IDR
+
+---
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_catalog
+    username: alliano-dev
+    password: alliano361**
+    hikari:
+      connection-timeout: 600000
+      idle-timeout: 600000
+      max-lifetime: 180000
+      maximum-pool-size: 10
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialec: org.hibernate.dialect.PostgreSQLDialect
+  config:
+    activate:
+      on-profile: test
+
+server:
+  port: 8083
+app:
+  welcome-txt: profile => on test mode<br>
+  time-zone: Asia/Indonesia/Sulawesi
+  currency: IDR
+
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_catalog
+    username: alliano-dev
+    password: alliano361**
+    hikari:
+      connection-timeout: 600000
+      idle-timeout: 600000
+      max-lifetime: 180000
+      maximum-pool-size: 10
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialec: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          '[batch_size]': 10
+          '[order_insert]': true
+  config:
+    activate:
+      on-profile: default
+
+server:
+  port: 8085
+app:
+  welcome-txt: profile => on development mode<br>
+  time-zone: Asia/Jakarta
+  currency: IDR
