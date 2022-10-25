@@ -46,7 +46,7 @@ public class UsernamePasswordAutenticationFilter extends AbstractAuthenticationP
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
        LoginRequestDto requestDto = this.objectMapper.readValue(request.getReader(), LoginRequestDto.class);
-       if(StringUtils.isBlank(requestDto.getPassword()) || StringUtils.isAllBlank(requestDto.getUsername())) {
+       if(StringUtils.isBlank(requestDto.getPassword()) || StringUtils.isBlank(requestDto.getUsername())) {
            throw new BadRequestException("username and password is required");
        }
        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(requestDto.getUsername(), requestDto.getPassword());
@@ -56,15 +56,15 @@ public class UsernamePasswordAutenticationFilter extends AbstractAuthenticationP
     //method ini digunakan untuk meng custom bagaimna jika autentivation berhasill
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
-        super.successfulAuthentication(request, response, chain, authResult);
         this.authSuccessHandler.onAuthenticationSuccess(request, response, authResult);
+        super.successfulAuthentication(request, response, chain, authResult);
     }
 
     //method ini digunakan untuk meng custom jikalau autentication gagal
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
-        super.unsuccessfulAuthentication(request, response, failed);
         this.authFailureHandler.onAuthenticationFailure(request, response, failed);
+        super.unsuccessfulAuthentication(request, response, failed);
     }
 
 }

@@ -17,7 +17,6 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor @Configuration
 public class UsernamePasswordAuthProvider implements AuthenticationProvider {
 
-
     private final ApplicationUserService appUserService;
 
     private final BCryptPasswordEncoder passwordEncoder;
@@ -35,7 +34,6 @@ public class UsernamePasswordAuthProvider implements AuthenticationProvider {
         }
         return new UsernamePasswordAuthenticationToken(passwword, null, appUsers.getAuthorities());
     }
-
 
     /**
      * untuk method ini berfungsi untuk menunjukan provider mana yang ingin digunakan bersasarkan
