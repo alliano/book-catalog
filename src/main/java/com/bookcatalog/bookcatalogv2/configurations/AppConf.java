@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.bookcatalog.bookcatalogv2.security.jwt.JWTTokenFactory;
+import com.bookcatalog.bookcatalogv2.security.utils.JwtTokenFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.jsonwebtoken.io.Decoders;
@@ -33,8 +33,8 @@ public class AppConf {
     }
 
     @Bean(value = "jwttokenFactory")
-    public JWTTokenFactory jwtTokenFactory(Key key) {
-        return new JWTTokenFactory(key);
+    public JwtTokenFactory jwtTokenFactory(Key key) {
+        return new JwtTokenFactory(key);
     }
 
 }

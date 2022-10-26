@@ -1,4 +1,4 @@
-package com.bookcatalog.bookcatalogv2.security.jwt;
+package com.bookcatalog.bookcatalogv2.security.utils;
 
 import java.security.Key;
 import java.time.LocalDateTime;
@@ -16,7 +16,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class JWTTokenFactory {
+public class JwtTokenFactory {
 
     private final Key key;
 

@@ -27,12 +27,17 @@ public class UsernamePasswordAuthProvider implements AuthenticationProvider {
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String username = (String) authentication.getPrincipal();
-        String passwword = (java.lang.String) authentication.getCredentials();
+        String password = (java.lang.String) authentication.getCredentials();
         UserDetails appUsers = this.appUserService.loadUserByUsername(username);
-        if(!this.passwordEncoder.matches(passwword, appUsers.getPassword())) {
+        if(!this.passwordEncoder.matches(password, appUsers.getPassword())) {
             throw new BadCredentialsException("invalid username password");
         }
-        return new UsernamePasswordAuthenticationToken(passwword, null, appUsers.getAuthorities());
+        /**
+         * ika berhasil maka detail user maka AutenticationProvider akan mengembalikanya ke
+         * authenticationFilter dan autetnicationFilter akan membuatkan SecurityContextHolder
+         * untuk menyimpan detail user yang diauthentikasi
+         * */
+        return new UsernamePasswordAuthenticationToken(username, null, appUsers.getAuthorities());
     }
 
     /**
