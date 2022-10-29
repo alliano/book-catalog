@@ -2,6 +2,7 @@ package com.bookcatalog.bookcatalogv2.security.model;
 
 import java.security.Key;
 
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
@@ -10,6 +11,7 @@ import io.jsonwebtoken.Jwts;
  * kelas ini akan di gunakan utuk merepresentasikan dari token yang dikirimkan oleh client
  * kepada backend
  */
+
 
 public class RawAccessJwtToken implements Token {
 
@@ -32,6 +34,8 @@ public class RawAccessJwtToken implements Token {
      * key disini adalah secret key yang disimpan oleh backend
      */
      public Jws<Claims> parseClaims(Key signingKey){
+        System.out.println("\n\n\n\n\n\n"+this.token+"\n\n\n\n\n\n");
+        System.out.println("\n\n\n\n\n\n"+signingKey.getEncoded().toString()+"\n\n\n\n\n\n");
         return Jwts.parserBuilder().setSigningKey(signingKey).build().parseClaimsJws(this.token);
      }
 

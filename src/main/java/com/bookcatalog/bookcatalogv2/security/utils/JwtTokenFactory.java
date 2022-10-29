@@ -23,7 +23,7 @@ public class JwtTokenFactory {
     public AccessJwtToken createAccessJwtToken(java.lang.String username, java.util.Collection<? extends GrantedAuthority> authorities) {
         Claims claims = Jwts.claims().setSubject(username);
         //scope ini berisi role dari username tersebut
-        claims.put("scope", authorities.stream().map( a -> a.getAuthority()).collect(Collectors.toList()));
+        claims.put("scopes", authorities.stream().map( a -> a.getAuthority()).collect(Collectors.toList()));
         //waktu kapan token ini di generate dan kapan expiered dari token ini
         LocalDateTime curentTime = LocalDateTime.now();
         LocalDateTime expieredTime = curentTime.plusMinutes(15L);
