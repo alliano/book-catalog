@@ -1,4 +1,4 @@
-package com.bookcatalog.bookcatalogv2.security;
+package com.bookcatalog.bookcatalogv2.configurations;
 
 import java.util.Arrays;
 
