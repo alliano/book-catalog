@@ -14,7 +14,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.AllArgsConstructor;
-
+//kelas ini digunakan untuk mengenerate Token Factory atau mengenerate JWT
 @AllArgsConstructor
 public class JwtTokenFactory {
 

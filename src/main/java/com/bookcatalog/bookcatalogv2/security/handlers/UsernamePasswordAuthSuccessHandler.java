@@ -23,6 +23,7 @@ import lombok.AllArgsConstructor;
 /**
  * kelas ini digunakan untuk mengatasi jikalau proses autentuication berhasil
  */
+
 @Configuration @AllArgsConstructor
 public class UsernamePasswordAuthSuccessHandler implements AuthenticationSuccessHandler {
 

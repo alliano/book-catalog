@@ -52,6 +52,7 @@ public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFil
          */
         String tokenPayload = request.getHeader("Authorization");
         RawAccessJwtToken token = new RawAccessJwtToken(tokenExtractor.extrac(tokenPayload));
+        System.out.println("success retrive the JWT token : " + token.getToken());
         return this.getAuthenticationManager().authenticate(new JwtAuthenticationToken(token));
     }
 
@@ -68,7 +69,7 @@ public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFil
     }
 
 
-    @Override// method ini akan di panggil ketika proses Authentikasi gagal
+    @Override // method ini akan di panggil ketika proses Authentikasi gagal
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
         //jika Authentikasi gagal maka bersihkan contextHolder
         SecurityContextHolder.clearContext();
