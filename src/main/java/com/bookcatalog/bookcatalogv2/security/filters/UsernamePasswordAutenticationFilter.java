@@ -45,11 +45,11 @@ public class UsernamePasswordAutenticationFilter extends AbstractAuthenticationP
      */
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
-       LoginRequestDto requestDto = this.objectMapper.readValue(request.getReader(), LoginRequestDto.class);
-       if(StringUtils.isBlank(requestDto.getPassword()) || StringUtils.isBlank(requestDto.getUsername())) {
-           throw new BadRequestException("username and password is required");
+       LoginRequestDto dto = this.objectMapper.readValue(request.getReader(), LoginRequestDto.class);
+       if(StringUtils.isBlank(dto.getPassword()) || StringUtils.isBlank(dto.getUsername())) {
+           throw new BadRequestException("username.password.mustbe.provided");
        }
-       UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(requestDto.getUsername(), requestDto.getPassword());
+       UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword());
        return this.getAuthenticationManager().authenticate(token);
     }
 

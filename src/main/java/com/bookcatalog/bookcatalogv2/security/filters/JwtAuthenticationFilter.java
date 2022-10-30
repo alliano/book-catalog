@@ -37,8 +37,8 @@ public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFil
 
     public JwtAuthenticationFilter(AuthenticationFailureHandler failureHandler ,TokenExtractor tokenExtractor ,RequestMatcher requiresAuthenticationRequestMatcher) {
         super(requiresAuthenticationRequestMatcher);
-        this.tokenExtractor = tokenExtractor;
         this.failureHandler = failureHandler;
+        this.tokenExtractor = tokenExtractor;
     }
 
     @Override

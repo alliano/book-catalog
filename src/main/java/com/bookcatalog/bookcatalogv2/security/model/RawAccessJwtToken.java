@@ -23,6 +23,7 @@ public class RawAccessJwtToken implements Token {
         return this.token;
     }
 
+
     /**
      * method ini digunakan untuk memparsing token jwt yang diberikan dari clien ke backend
      * diparsing menjadi claims
@@ -30,8 +31,8 @@ public class RawAccessJwtToken implements Token {
      * key disini adalah secret key yang disimpan oleh backend dalam context ini saya menggunakan
      * bean. bisa di cek di class AppConf.java
      */
-     public Jws<Claims> parseClaims(Key signingKey){
-        return Jwts.parserBuilder().setSigningKey(signingKey).build().parseClaimsJws(this.token);
-     }
+    public Jws<Claims> parseClaims(Key signingKey){
+		return Jwts.parserBuilder().setSigningKey(signingKey).build().parseClaimsJws(this.token);
+	}
 
 }
