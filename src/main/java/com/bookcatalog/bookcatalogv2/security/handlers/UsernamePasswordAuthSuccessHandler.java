@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
@@ -35,8 +34,8 @@ public class UsernamePasswordAuthSuccessHandler implements AuthenticationSuccess
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         java.util.Map<String, String> resultMap = new java.util.HashMap<String, String>();
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        AccessJwtToken token = jwtTokenFactory.createAccessJwtToken(userDetails.getUsername(),authentication.getAuthorities());
+        String username = (String) authentication.getPrincipal();
+        AccessJwtToken token = jwtTokenFactory.createAccessJwtToken(username,authentication.getAuthorities());
         resultMap.put("token", token.getToken());
         response.setStatus(HttpStatus.OK.value());
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
