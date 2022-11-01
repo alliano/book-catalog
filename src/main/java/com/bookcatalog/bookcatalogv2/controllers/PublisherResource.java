@@ -23,10 +23,11 @@ import com.bookcatalog.bookcatalogv2.dto.PublisherUpdateRequestDto;
 import com.bookcatalog.bookcatalogv2.dto.ResultPageresponseDto;
 import com.bookcatalog.bookcatalogv2.services.PublisherService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 
 @RestController @Validated // ini kita gunakan ketika kita ingin memvalidasi di level parameter nya misal kita ingin memvalidai String name
-@AllArgsConstructor
+@AllArgsConstructor @SecurityRequirement(name = "bearerAuth")
 public class PublisherResource {
 
 	private final PublisherService publiserService;
@@ -50,7 +51,7 @@ public class PublisherResource {
 
 	@PreAuthorize(value = "isAuthenticated()")
 	@LogThisMethod
-	@GetMapping(path = "/v1/publisher")
+	@GetMapping(path = "/v1/publishers")
 	public ResponseEntity<ResultPageresponseDto<PublisherListresponseDto>>findByPublisherList(@RequestParam(name = "pages", required = true, defaultValue = "0") Integer pages, @RequestParam(name = "limit", required = true, defaultValue = "10") Integer limit, @RequestParam(name = "sortBy", required = true, defaultValue = "name") String sortBy, @RequestParam(name = "direction", required = false, defaultValue = "asc") String direction, @RequestParam(name = "publisherName", required = false) String publisherName) {
 		return ResponseEntity.ok().body(this.publiserService.findPublisherList(pages, limit, sortBy, direction, publisherName));
 	}

@@ -19,11 +19,12 @@ import com.bookcatalog.bookcatalogv2.dto.AuthorResponseDto;
 import com.bookcatalog.bookcatalogv2.dto.AuthorUpdateRequestDto;
 import com.bookcatalog.bookcatalogv2.services.AuthorService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PutMapping;
 
 
-@Validated
+@Validated @SecurityRequirement(name = "bearerAuth")
 @RestController @AllArgsConstructor
 public class AuthorResource {
 

@@ -14,8 +14,10 @@ import com.bookcatalog.bookcatalogv2.dto.CategoryListResponseDto;
 import com.bookcatalog.bookcatalogv2.dto.ResultPageresponseDto;
 import com.bookcatalog.bookcatalogv2.services.CategoryService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 
+@SecurityRequirement(name = "bearerAuth")
 @RestController @AllArgsConstructor
 public class CategoryResource {
 

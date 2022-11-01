@@ -5,13 +5,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import com.bookcatalog.bookcatalogv2.security.model.JwtAuthenticationToken;
 import com.bookcatalog.bookcatalogv2.security.model.RawAccessJwtToken;
@@ -20,7 +20,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import lombok.AllArgsConstructor;
 
-@Configuration @AllArgsConstructor
+@Component @AllArgsConstructor
 public class JwtAuthenticationProvider implements AuthenticationProvider {
 
     private final Key key;
@@ -29,7 +29,6 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
         RawAccessJwtToken token = (RawAccessJwtToken) authentication.getCredentials();
-        System.out.println(token.getToken());
         Jws<Claims> jwsClaims = token.parseClaims(key);
         java.lang.String subject = jwsClaims.getBody().getSubject();
         java.util.List<java.lang.String> scopes = jwsClaims.getBody().get("scopes", List.class);

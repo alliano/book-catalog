@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bookcatalog.bookcatalogv2.dto.UserDetailResponseDto;
 import com.bookcatalog.bookcatalogv2.services.ApplicationUserService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
+@AllArgsConstructor @SecurityRequirement(name = "bearerAuth")
 @RestController @RequestMapping(path = "/v1", method = RequestMethod.GET)
 public class UserDetailResource {
 

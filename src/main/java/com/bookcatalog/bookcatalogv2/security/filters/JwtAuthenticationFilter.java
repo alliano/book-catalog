@@ -52,7 +52,9 @@ public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFil
          */
         String tokenPayload = request.getHeader("Authorization");
         RawAccessJwtToken token = new RawAccessJwtToken(tokenExtractor.extrac(tokenPayload));
-        System.out.println("success retrive the JWT token : " + token.getToken());
+
+        System.out.println("\n\nSUCCESS RETRIVE TOKEN : " + token.getToken());
+
         return this.getAuthenticationManager().authenticate(new JwtAuthenticationToken(token));
     }
 

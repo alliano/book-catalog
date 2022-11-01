@@ -22,10 +22,11 @@ import com.bookcatalog.bookcatalogv2.dto.BookUpdateRequestDto;
 import com.bookcatalog.bookcatalogv2.dto.ResultPageresponseDto;
 import com.bookcatalog.bookcatalogv2.services.BookService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-@RestController
+@RestController @SecurityRequirement(name = "bearerAuth")
 public class BookResource {
 
 	private final BookService bookService;

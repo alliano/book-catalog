@@ -23,10 +23,11 @@ import com.bookcatalog.bookcatalogv2.dto.BookDetailResponseDto;
 import com.bookcatalog.bookcatalogv2.dto.BookUpdateRequestDto;
 import com.bookcatalog.bookcatalogv2.services.BookService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@AllArgsConstructor
+@AllArgsConstructor @SecurityRequirement(name = "bearerAuth")
 @Controller @Slf4j @RequestMapping(path = "/book")
 public class BookController {
 

@@ -29,8 +29,10 @@ public class JwtAuthenticationToken extends AbstractAuthenticationToken{
     //constructor ini digunakan untuk token yang sudah di autentikasi
     public JwtAuthenticationToken(UserDetails userDetails, Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
+        this.eraseCredentials();
         this.userDetails = userDetails;
-        super.eraseCredentials();
+        this.userDetails = userDetails;
+        super.setAuthenticated(true);
     }
 
     @Override
